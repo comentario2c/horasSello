@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { HorasSellosService, RegistroHoras} from '../services/horas-sellos.service';
+import { HorasSellosService, RegistroHoras } from '../services/horas-sellos.service';
 import { HttpClientModule } from '@angular/common/http';
-
 
 @Component({
   selector: 'app-horas-sellos',
   standalone: true,
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, HttpClientModule],  // Aquí es obligatorio importar HttpClientModule
   templateUrl: './horas-sellos.component.html',
-  styleUrls: ['./horas-sellos.component.css'],
+  styleUrls: ['./horas-sellos.component.css']
 })
+
+
 export class HorasSellosComponent implements OnInit {
   rut: string = '';
   registros: RegistroHoras[] = [];
@@ -28,10 +29,7 @@ export class HorasSellosComponent implements OnInit {
       this.horasSellosService.obtenerHorasPorRut(this.rut).subscribe({
         next: (registros: RegistroHoras[]) => {
           this.registros = registros;
-          this.totalHoras = registros.reduce(
-            (total, reg) => total + reg.CantidadHoras,
-            0
-          );
+          this.totalHoras = registros.reduce((total, reg) => total + reg.CantidadHoras, 0);
         },
         error: (err) => {
           console.error('Error al obtener registros:', err);

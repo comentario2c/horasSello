@@ -1,8 +1,10 @@
+<div class="login-wrapper">
+  <div class="login-card">
+    <h2 class="mat-card-title">Consulta de Horas Sello</h2>
 
-<div class="contenedor">
-  <h2>Consulta de Horas Sello</h2>
+    <label for="rut">Ingresa tu RUT:</label>
+    <input class="full-width-input" [(ngModel)]="rut" placeholder="Ej: 12345678-9" id="rut" />
 
-  <label for="rut">Ingresa tu RUT:</label>
-  <input [(ngModel)]="rut" placeholder="Ej: 12345678-9" />
-  <button (click)="irAHorasSello()">Consultar</button>
+    <button class="full-width-button" (click)="irAHorasSello()">Consultar</button>
+  </div>
 </div>

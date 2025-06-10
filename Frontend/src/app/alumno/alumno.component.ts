@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-alumno',
+  standalone: true,
   imports: [FormsModule],
   templateUrl: './alumno.component.html',
   styleUrls: ['./alumno.component.css'] 
