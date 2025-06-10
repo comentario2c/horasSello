@@ -3,8 +3,8 @@ function consultarHoras(app, db) {
     const query = 'SELECT * FROM ConsultaHoras';
     db.query(query, (err, results) => {
       if (err) {
-        console.error('Error al obtener los datos:', err);
-        return res.status(500).json({ error: 'Error al obtener los datos' });
+        console.error('Error al obtener los datos de la vista "ConsultaHoras"', err);
+        return res.status(500).json({ error: 'Error al obtener los datos de la vista "ConsultaHoras"' });
       }
       res.json(results);
     });
