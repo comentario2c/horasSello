@@ -9,5 +9,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+<<<<<<< HEAD
   title = 'horasSello';
+=======
+  title = 'horas-sellos';
+>>>>>>> origin/pepeyon
 }

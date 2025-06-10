@@ -3,7 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "horasSello": {
+=======
+    "horas-sellos": {
+>>>>>>> origin/pepeyon
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+<<<<<<< HEAD
             "outputPath": "dist/horas-sello",
+=======
+            "outputPath": "dist/horas-sellos",
+>>>>>>> origin/pepeyon
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -21,18 +29,33 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+<<<<<<< HEAD
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
+=======
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+>>>>>>> origin/pepeyon
               "src/styles.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
+<<<<<<< HEAD
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
+=======
+            "outputMode": "server",
+            "ssr": {
+              "entry": "src/server.ts"
+>>>>>>> origin/pepeyon
             }
           },
           "configurations": {
@@ -40,6 +63,7 @@
               "budgets": [
                 {
                   "type": "initial",
+<<<<<<< HEAD
                   "maximumWarning": "500kb",
                   "maximumError": "1mb"
                 },
@@ -47,6 +71,15 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
+=======
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+>>>>>>> origin/pepeyon
                 }
               ],
               "outputHashing": "all"
@@ -63,19 +96,30 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "buildTarget": "horasSello:build:production"
             },
             "development": {
               "buildTarget": "horasSello:build:development"
+=======
+              "buildTarget": "horas-sellos:build:production"
+            },
+            "development": {
+              "buildTarget": "horas-sellos:build:development"
+>>>>>>> origin/pepeyon
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
+<<<<<<< HEAD
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "buildTarget": "horasSello:build"
           }
+=======
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+>>>>>>> origin/pepeyon
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -86,11 +130,20 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+<<<<<<< HEAD
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
+=======
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+>>>>>>> origin/pepeyon
               "src/styles.css"
             ],
             "scripts": []
@@ -98,5 +151,11 @@
         }
       }
     }
+<<<<<<< HEAD
+=======
+  },
+  "cli": {
+    "analytics": false
+>>>>>>> origin/pepeyon
   }
 }
