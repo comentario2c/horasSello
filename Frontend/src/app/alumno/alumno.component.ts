@@ -19,4 +19,8 @@ export class AlumnoComponent {
       this.router.navigate(['/horas-sellos', this.rut]);
     }
   }
+  
+    volverInicio() {
+    this.router.navigate(['/']);
+  }
 }
